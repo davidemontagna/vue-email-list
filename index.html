@@ -10,9 +10,13 @@
 <body>
     <div id="app">
         <button @click="createList()">Genera lista</button>
-        <ul v-for="email in address">
-            <li >{{email}}</li>
-        </ul>
+        <div v-show="address.length == 10">
+            <ul  v-for="email in address">
+                <li >{{email}}</li>
+            </ul>     
+        </div>
+        
+        
 
     </div>
 

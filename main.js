@@ -15,6 +15,7 @@ let app = new Vue({
 
     methods: {
         createList: function(){
+            this.address=[];
             for(i=0; i < 10; i++){
 
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -22,6 +23,7 @@ let app = new Vue({
                     
                     //console.log(response.data.response);
                     this.address.push(response.data.response);
+                    console.log(this.address)
                 })
                 .catch((error) => {
                     console.log(error);
