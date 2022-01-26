@@ -11,13 +11,12 @@
     <div id="app">
         <button @click="createList()">Genera lista</button>
         <div v-show="address.length == 10">
-            <ul  v-for="email in address">
-                <li >{{email}}</li>
-            </ul>     
-        </div>
-        
-        
 
+            <ul>
+                <li v-for="email in address">{{email}}</li>
+            </ul>   
+
+        </div>      
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
